@@ -37,12 +37,10 @@ function calculate(){
 }
 window.addEventListener('keyup', (e) => {
     if(e.key === 'Enter'){
-        if((typeof parseInt(bill.value) === 'number') && (typeof parseInt(peopleNumber.value) === 'number')){
+        if(!((isNaN(bill.value))) && (!(isNaN(peopleNumber.value)))){
             calculate();
         }else{
             errorMessage.classList.add('show');
-            console.log(typeof Number(bill.value));
-            console.log(typeof Number(peopleNumber.value))
         }
     }
 })
